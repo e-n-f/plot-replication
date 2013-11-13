@@ -1,0 +1,7 @@
+#!/bin/sh
+
+tiles=/tmp/tiles
+
+mkdir -p $tiles/$1/$2/$3
+echo "$*"
+../datamaps/render -t0 -C 8 $1 $2 $3 $4 | pngquant 64 > $tiles/$1/$2/$3/$4.png

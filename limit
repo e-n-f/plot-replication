@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+$minlat = 4.74;
+$minlon = 115.56;
+$maxlat = 19.48;
+$maxlon = 128.26;
+
+while (<>) {
+	($lat, $lon) = split(/,/);
+
+	print if ($lat > $minlat && $lat < $maxlat && $lon > $minlon && $lon < $maxlon);
+}
+
